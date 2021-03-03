@@ -1,0 +1,24 @@
+table{
+    border-color: black;
+    border: 2px;
+}
+.number{
+    text-align: right;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.item{
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.taxable{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.image{
+    height: 30px;
+    width: 30px; 
+}

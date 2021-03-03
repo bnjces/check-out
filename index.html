@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <title>Checkout Cart</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+    <link rel="stylesheet" href="css/main.css" />
+    </head>
+
+    <body onload="init();">
+        <div width="100%">
+            <table>
+                <tr>
+                    <th class="item">Item</th><th class="number">Unit Price</th><th class="number">Qty</th><th>Adjust</th><th  class="number">Extend Price</th><th class="taxable">Taxable</th><th class="number">Tax</th><th>Image</th>
+                </tr>
+                <tr>
+                    <td class="item">Item 1</td><td class="number">$19.95</td><td class="number">2</td><td><button type="button" class="upqty">+</button><button type="button" class="downqty">-</button></td><td class="number"></td><td class="taxable">Y</td><td class="number"></td><td><img src="images/1.png" class="image" /></td>
+                </tr>
+                <tr>
+                    <td class="item">Item 2</td><td class="number">$9.95</td><td class="number">1</td><td><button type="button" class="upqty">+</button><button type="button" class="downqty">-</button></td><td class="number"></td><td class="taxable">N</td><td class="number"></td><td><img src="images/2.png" class="image" /></td>
+                </tr>
+                <tr>
+                    <td class="item">Item 3</td><td class="number">$59.95</td><td class="number">1</td><td><button type="button" class="upqty">+</button><button type="button" class="downqty">-</button></td><td class="number"></td><td class="taxable">Y</td><td class="number"></td><td><img src="images/3.png" class="image" /></td>
+                </tr>
+                <tr class="total">
+                    <th>Total</th><th></th><th></th><th></th><th class="number"></th><th></th><th class="number"></th><th></th>
+                </tr>
+            </table>
+            <button type="button" class="addItem">Add a new item</button>
+        </div>
+       <script src="js/main.js"></script>
+    </body>
+    
+</html>
