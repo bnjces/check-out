@@ -22,19 +22,25 @@ function updateCart() {
         console.log(rows[i]);                           // shows what the rows are, to check if the for loop was done correctly (it was!)
         let childNodes = rows[i].childNodes             // access child nodes in row (individual data points, price etc)
         console.log(childNodes);                        // check child nodes
-        /* for(let j = 0; j < childNodes.length; j++){
+         /*for(let j = 0; j < childNodes.length; j++){    // child nodes location finder
             console.log(childNodes[j].innerText);       // check text in child nodes to ascertain precise location of price, quantity, etc. 
-        */
+         } */
         let itemPrice = parseFloat(childNodes[2].innerText.substring(1));        // grab the price, Math function takes string and makes it into number, start at 1 (to avoid the $)
         let qty = parseInt(childNodes[3].innerText);                            // grab the quantity of items
         let extendedPrice = itemPrice * qty;
+        childNodes[5].innerText = formatter.format(extendedPrice);       // set the extended price in its place in the table row
+        
+            // to do  assume tax rate of 8% add tax value to row and running total tax: use switch
+        let taxable = childNodes[6].innerText;
+        let salesTax = 0.08;        
+        switch (taxable) {
+            case "Y":
+                childNodes[7].innerText = formatter.format(extendedPrice * salesTax);
+                break;
+            case "N":
+                childNodes[7].innerText = formatter.format(0);
+                break;
         }
-    }           
-
-
-
-    // to do  assume tax rate of 8% add tax value to row and running total tax
-    
-    // to do  place total price in <td> last row, total tax in <td>
-    
-
+    }
+    // to do  place total price in <td> last row, total tax in <td> 
+}   
