@@ -13,8 +13,8 @@ function init() {
 
 function updateCart() {
     // zero out running totals
-    var extendedPrice = 0.0;
-    var tax = 0.0;
+    var totalExtendedPrice = 0.0;
+    var totalTax = 0.0;
     // find each <tr> except for first and last
     var rows = document.getElementsByTagName("tr");     // grabs all the table rows, returns node list
     console.log(rows);                                  // check to see if the rows have been grabbed
@@ -41,9 +41,12 @@ function updateCart() {
                 childNodes[7].innerText = formatter.format(0);
                 break;
         }
+        // totalExtendedPrice = 
+        // totalTax = 
     }
-    let totalsRow = rows[i].length;         // gives location of the totals row, the last row regardless of amt of rows
-
+    
     // to do  place total price in <td> last row, total tax in <td> 
+    // total extended price
+
 
 }   
