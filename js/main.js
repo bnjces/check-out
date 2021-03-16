@@ -41,7 +41,7 @@ function updateCart() {
                 childNodes[7].innerText = formatter.format(0);
                 break;
         }
-        // totalExtendedPrice = 
+        // totalExtendedPrice = extendedPrice++
         // totalTax = 
     }
     
